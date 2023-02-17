@@ -7,12 +7,14 @@ import com.example.order.service.model.OrderLineItems;
 import com.example.order.service.repository.OrderRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.UUID;
 
 @Service
 @AllArgsConstructor
+@Transactional
 public class OrderService {
 
     public final OrderRepository orderRepository;
